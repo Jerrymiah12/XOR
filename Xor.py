@@ -7,7 +7,8 @@ Xs = Tensor(np.array([0,1],[1,0],[1,1],[0,0]))
 Ys = Tensor(np.array([1],[1],[0],[0]))
 class XORModel(nn.Module):
   def __init__(self):
-    super().layers = nn.Sequential(
+    super().__init__()
+    self.layers = nn.Sequential(
       nn.Linear(2,2),
       nn.Sigmoid(),
       nn.Linear(2,1),
